@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_HOST: HOST
+      MYSQL_HOST_FILE: HOST_FILE
+      MYSQL_USER: USER
+      MYSQL_USER_FILE: USER_FILE
+      MYSQL_PASSWORD: PASSWORD
+      MYSQL_PASSWORD_FILE: PASSWORD_FILE
+      MYSQL_DB: DB
+      MYSQL_DB_FILE: DB_FILE
+    ports:
+      - "3306:3306"
+    volumes:
+      - var/lib/mysql
+    image: maetaku/todo
