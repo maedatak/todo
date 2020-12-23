@@ -5,6 +5,8 @@ services:
      volumes:
        - db_data:/var/lib/mysql
      restart: always
+     ports:
+       - "3306:3306" 
      environment:
        MYSQL_ROOT_PASSWORD: sometodo
        MYSQL_DATABASE: todo
@@ -24,3 +26,4 @@ services:
         MYSQL_DB_NAME: todo
 volumes:
     db_data: {}
+
